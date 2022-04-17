@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+section{
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    margin-top: 20px;
+}
+
+button{
+    background: none;
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: -35px;
+    margin-top: 5px;
+    float: right;
+}
+
+.field {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: rgba(230, 230, 230, 0.6);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+
+.field:hover{
+    background-color: rgba(230, 230, 230, 1);
+}
+
+.field:focus{
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.info span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.title {
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.t3 {
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.form-inline {
+    display: flex;
+    justify-content: center;
+}
+
+.form-inline input{
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    margin-bottom: 35px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.fan-info {
+    display: flex;
+    cursor: pointer;
+    width: 350px;
+    height: 80px;
+    border: 1px solid;
+    border-color: rgb(229, 232, 235);
+    border-radius: 10px;
+    margin: 10px 10px;
+    transition: .2s;
+}
+
+.fan-info:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .1);
+    transform: scale(1.02);
+}
+
+.fan-info img {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+.fan-info .data{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.main-data {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.sub-data{
+    font-weight: 400;
+    color: rgb(124, 124, 124);
+}
+
+@media (max-width: 760px) {
+
+    .fan-info {
+        width: 250px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 330px) {
+
+    button{
+        float: left;
+    }
+
+    .field{
+        width: 75%;
+    }
+
+}

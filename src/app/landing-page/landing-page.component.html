@@ -1,0 +1,92 @@
+<section class="banner">
+    <div class="banner-logo"><img src="assets/img/otaku4k.png" alt=""></div>
+    <video src="assets/video/concert.mp4" autoplay [muted]="true" loop></video>
+</section>
+
+<app-wave-animation></app-wave-animation>
+
+<section class="content" id="event">
+    <h3>événements récents</h3>
+    <hr>
+    <div class="event"  *ngIf="activites[0]!=null">
+
+        <div class="evt"  *ngFor="let activite of activites">
+            <img src="{{activite.image}}" alt="">
+            <h3>{{activite.texte}}</h3>
+            <div class="info">{{activite.date}}</div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="content" id="crew">
+    <h3>à propos de nous</h3>
+    <hr>
+    <div class="description">
+        <p>Otaku 4k est un groupe d'électro-punk créé en 2019 par Tetsuo Nagasaki et Isaac Turing. Trois ans plus tard,
+            le groupe commence ses premières représentations officielles accompagné de deux nouveaux membres, Samantha
+            Botox et Adèle Curie.</p>
+
+        <p>Otaku 4k s'occupe d’animer vos soirées jusqu’au bout de la nuit !</p>
+    </div>
+
+    <div class="picture">
+        <div class="pic">
+            <img src="assets/img/Goku.jpg" alt="">
+            <p class="pseudo">Goku</p>
+            <p class="name">Tetsuo Nagasaki</p>
+        </div>
+        <div class="pic">
+            <img src="assets/img/Barbie.jpg" alt="">
+            <p class="pseudo">Barbie</p>
+            <p class="name">Samantha Botox</p>
+        </div>
+        <div class="pic">
+            <img src="assets/img/Stormtrooper.jpg" alt="">
+            <p class="pseudo">Stormtrooper</p>
+            <p class="name">Isaac Turing</p>
+        </div>
+        <div class="pic">
+            <img src="assets/img/Esmeralda.jpg" alt="">
+            <p class="pseudo">Esmeralda</p>
+            <p class="name">Adèle Curie</p>
+        </div>
+    </div>
+</section>
+
+<section class="content" id="fans">
+    <h3>hall of fans</h3>
+    <hr>
+    <div class="description">
+        <p>Faites-vous connaître des membres d'Otaku 4k, rejoignez notre Hall of Fans et devenez un membre officiel de la
+            #OtakuArmy !</p>
+    </div>
+
+    <a [routerLink]="['/fans']"><button class="btn-hover btn">Rejoindre</button></a>
+</section>
+
+<section class="track" id="track">
+    <h3>extrait</h3>
+    <hr>
+    <div class="wrapper">
+        <div class="music">
+          <img src="assets/img/miniature.jpg" alt="">
+            <div class="title">
+                <h1>Disco - OTAKU 4K</h1>
+                <p>Album - Ultra Instinct</p>
+
+                <div id="waveform"></div> 
+                <audio class="audio" controls hidden>
+                    <source src="assets/audio/disco_ncs.mp3">
+                </audio>
+
+                <div class="controls">
+                    <img *ngIf="playBtn" src="assets/img/play.png" (click)="play()">
+                    <img *ngIf="!playBtn" src="assets/img/pause.png" (click)="play()">
+                    <img *ngIf="soundBtn" src="assets/img/volume.png" (click)="mute()">
+                    <img *ngIf="!soundBtn" src="assets/img/mute.png" (click)="mute()">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

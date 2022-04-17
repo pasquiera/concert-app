@@ -1,0 +1,54 @@
+<div class="title">
+    <h3>Rejoindre le hall of fans</h3>
+</div>
+
+<section>
+    <form ngNativeValidate #addForm="ngForm" (ngSubmit)="onAddFan(addForm)">
+        <div class="info">
+            <span>Nom</span>
+            <input class="field" name="nom" ngModel required pattern="[a-zA-Z]*">
+        </div>
+
+        <div class="info">
+            <span>Prénom</span>
+            <input class="field" name="prenom" ngModel required pattern="[a-zA-Z]*">
+        </div>
+
+        <div class="info">
+            <span>Ville</span>
+            <input class="field" name="ville" ngModel required pattern="[a-zA-Z]*">
+        </div>
+
+        <div class="info">
+            <span>Pays</span>
+            <input class="field" name="pays" ngModel required pattern="[a-zA-Z]*"> 
+        </div>
+
+        <button>Valider</button>
+    </form>
+</section>
+
+<div class="title">
+    <h3>Membres de la #OtakuArmy</h3>
+</div>
+
+<form class="form-inline">
+    <input type="search" (ngModelChange)="searchFans(key.value)" #key="ngModel" ngModel name="key"
+        placeholder="Rechercher un fan" required pattern="[a-zA-Z]*">
+</form>
+
+<div class="title t3" *ngIf="fans.length == 0">
+    <h5>aucun résultats</h5>
+</div>
+
+<div class="wrapper" *ngIf="fans[0]!=null">
+    <div class="fan-info" *ngFor="let fan of fans">
+        <div class="image">
+            <img src="assets/img/4k.jpg" alt="">
+        </div>
+        <div class="data">
+            <div class="main-data">{{fan.nom}} {{fan.prenom}}</div>
+            <div class="sub-data">{{fan.ville}} - {{fan.pays}}</div>
+        </div>
+    </div>
+</div>
