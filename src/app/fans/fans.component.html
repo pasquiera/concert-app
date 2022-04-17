@@ -3,7 +3,7 @@
 </div>
 
 <section>
-    <form ngNativeValidate #addForm="ngForm" (ngSubmit)="onAddFan(addForm)">
+    <form class="form1" ngNativeValidate #addForm="ngForm" (ngSubmit)="onAddFan(addForm)">
         <div class="info">
             <span>Nom</span>
             <input class="field" name="nom" ngModel required pattern="[a-zA-Z]*">
@@ -21,7 +21,7 @@
 
         <div class="info">
             <span>Pays</span>
-            <input class="field" name="pays" ngModel required pattern="[a-zA-Z]*"> 
+            <input class="field" name="pays" ngModel required pattern="[a-zA-Z]*">
         </div>
 
         <button>Valider</button>
@@ -32,10 +32,27 @@
     <h3>Membres de la #OtakuArmy</h3>
 </div>
 
-<form class="form-inline">
-    <input type="search" (ngModelChange)="searchFans(key.value)" #key="ngModel" ngModel name="key"
-        placeholder="Rechercher un fan" required pattern="[a-zA-Z]*">
-</form>
+<div class="filter">
+
+    <form class="form-inline">
+        <input type="search" (ngModelChange)="searchFans(key.value)" #key="ngModel" ngModel name="key"
+            placeholder="Rechercher un fan" required pattern="[a-zA-Z]*">
+    </form>
+
+    <div class="dropdown">
+        <div class="dropdown-select">
+            <span class="select">{{placeholder}}</span>
+            <span>
+                +
+            </span>
+        </div>
+        <div class="dropdown-list">
+            <div class="dropdown-list__item" (click)="sortFilter('nom')">Nom</div>
+            <div class="dropdown-list__item" (click)="sortFilter('ville')">Ville</div>
+            <div class="dropdown-list__item" (click)="sortFilter('pays')">Pays</div>
+        </div>
+    </div>
+</div>
 
 <div class="title t3" *ngIf="fans.length == 0">
     <h5>aucun résultats</h5>

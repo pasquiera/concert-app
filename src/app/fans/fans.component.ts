@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 export class FansComponent implements OnInit {
 
   fans: IFans[] = [];
+  placeholder: string = 'Trier par';
 
   constructor(private rest: RestService) {
   }
@@ -59,6 +60,26 @@ export class FansComponent implements OnInit {
       this.getFans();
     }
 
+    this.placeholder = 'Trier par'
+
+  }
+
+  sortFilter(filter: string): void {
+    // sort in alphabatical order
+    switch (filter) {
+      case 'nom':
+        this.placeholder = "Nom";
+        this.fans.sort((a, b) => a.nom.localeCompare(b.nom))
+        break;
+      case 'ville':
+        this.placeholder = "Ville";
+        this.fans.sort((a, b) => a.ville.localeCompare(b.ville))
+        break;
+      case 'pays':
+        this.placeholder = "Pays";
+        this.fans.sort((a, b) => a.pays.localeCompare(b.pays))
+        break;
+    }
   }
 
 }
