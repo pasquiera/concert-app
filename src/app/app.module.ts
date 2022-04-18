@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { ArtisteComponent } from './artiste/artiste.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
     NavbarComponent,
     WaveAnimationComponent,
     FooterComponent,
-    FansComponent
+    FansComponent,
+    ArtisteComponent
   ],
   imports: [
     BrowserModule,

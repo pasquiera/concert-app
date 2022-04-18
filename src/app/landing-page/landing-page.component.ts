@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RestService } from 'src/services/rest.service';
+import { Router } from '@angular/router';
+import { RestService } from 'src/app/services/rest.service';
+
 
 import WaveSurfer from 'wavesurfer.js';
 import { IActivite } from '../models/IActivite';
@@ -17,7 +19,7 @@ export class LandingPageComponent implements OnInit {
   public soundBtn: Boolean = true;
   activites: IActivite[] = [];
 
-  constructor(private rest: RestService) { }
+  constructor(private rest: RestService, private router: Router) { }
 
   ngOnInit(): void {
 

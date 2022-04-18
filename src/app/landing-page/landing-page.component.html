@@ -8,14 +8,14 @@
 <section class="content" id="event">
     <h3>événements récents</h3>
     <hr>
-    <div class="event"  *ngIf="activites[0]!=null">
+    <div class="event" *ngIf="activites[0]!=null">
 
-        <div class="evt"  *ngFor="let activite of activites">
+        <div class="evt" *ngFor="let activite of activites">
             <img src="{{activite.image}}" alt="">
             <h3>{{activite.texte}}</h3>
             <div class="info">{{activite.date}}</div>
         </div>
-        
+
     </div>
 </section>
 
@@ -32,22 +32,22 @@
 
     <div class="picture">
         <div class="pic">
-            <img src="assets/img/Goku.jpg" alt="">
+            <img src="assets/img/Goku.jpg" alt="" [routerLink]="['/artiste/1']">
             <p class="pseudo">Goku</p>
             <p class="name">Tetsuo Nagasaki</p>
         </div>
         <div class="pic">
-            <img src="assets/img/Barbie.jpg" alt="">
+            <img src="assets/img/Barbie.jpg" alt="" [routerLink]="['/artiste/2']">
             <p class="pseudo">Barbie</p>
             <p class="name">Samantha Botox</p>
         </div>
         <div class="pic">
-            <img src="assets/img/Stormtrooper.jpg" alt="">
+            <img src="assets/img/Stormtrooper.jpg" alt="" [routerLink]="['/artiste/3']">
             <p class="pseudo">Stormtrooper</p>
             <p class="name">Isaac Turing</p>
         </div>
         <div class="pic">
-            <img src="assets/img/Esmeralda.jpg" alt="">
+            <img src="assets/img/Esmeralda.jpg" alt="" [routerLink]="['/artiste/4']">
             <p class="pseudo">Esmeralda</p>
             <p class="name">Adèle Curie</p>
         </div>
@@ -58,7 +58,8 @@
     <h3>hall of fans</h3>
     <hr>
     <div class="description">
-        <p>Faites-vous connaître des membres d'Otaku 4k, rejoignez notre Hall of Fans et devenez un membre officiel de la
+        <p>Faites-vous connaître des membres d'Otaku 4k, rejoignez notre Hall of Fans et devenez un membre officiel de
+            la
             #OtakuArmy !</p>
     </div>
 
@@ -70,12 +71,12 @@
     <hr>
     <div class="wrapper">
         <div class="music">
-          <img src="assets/img/miniature.jpg" alt="">
+            <img src="assets/img/miniature.jpg" alt="">
             <div class="title">
                 <h1>Disco - OTAKU 4K</h1>
                 <p>Album - Ultra Instinct</p>
 
-                <div id="waveform"></div> 
+                <div id="waveform"></div>
                 <audio class="audio" controls hidden>
                     <source src="assets/audio/disco_ncs.mp3">
                 </audio>

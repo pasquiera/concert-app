@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit {
     var header = document.querySelector("header");
     var logo = document.getElementById("logo1"); // white logo
     var logo2 = document.getElementById("logo2"); // black logo
+    const hamburger = document.querySelector('.hamburger');
 
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationStart) {
@@ -27,10 +28,12 @@ export class NavbarComponent implements OnInit {
           header?.classList.add("stick");
           logo?.classList.add("hidden");
           logo2?.classList.remove("hidden");
+          hamburger?.classList.remove('white');
         } else {
           header?.classList.remove("stick");
           logo?.classList.remove("hidden");
           logo2?.classList.add("hidden");
+          hamburger?.classList.add('white');
         }
 
       }
@@ -42,17 +45,29 @@ export class NavbarComponent implements OnInit {
     var header = document.querySelector("header");
     var logo = document.getElementById("logo1"); // white logo
     var logo2 = document.getElementById("logo2"); // black logo
+    const hamburger = document.querySelector('.hamburger');
 
     if (window.scrollY > 0 || this.url !== '/home') {
       header?.classList.add("stick");
       logo?.classList.add("hidden");
       logo2?.classList.remove("hidden");
+      hamburger?.classList.remove('white');
     } else {
       header?.classList.remove("stick");
       logo?.classList.remove("hidden");
       logo2?.classList.add("hidden");
+      hamburger?.classList.add('white');
     }
 
+  }
+
+  setActive(): void {
+    // change hamburger style
+    // display mobile menu
+    const hamburger = document.querySelector('.hamburger');
+    const mobile_menu = document.querySelector('.mobile-nav');
+    hamburger?.classList.toggle('is-active');
+    mobile_menu?.classList.toggle('is-active');
   }
 
 }

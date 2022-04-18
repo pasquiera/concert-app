@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestService } from 'src/services/rest.service';
+import { RestService } from 'src/app/services/rest.service';
 import { IFans } from '../models/IFans';
 import { NgForm } from '@angular/forms';
 
@@ -17,6 +17,7 @@ export class FansComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.getFans();
   }
 

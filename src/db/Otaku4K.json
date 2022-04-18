@@ -1,6 +1,7 @@
 {
   "artistes": [
     {
+      "id": 1,
       "nom": "Nagasaki",
       "prenom": "Tetsuo",
       "alias": "Goku",
@@ -11,6 +12,7 @@
       "image": "img/Goku.jpg"
     },
     {
+      "id": 2,
       "nom": "Botox",
       "prenom": "Samantha",
       "alias": "Barbie",
@@ -22,6 +24,7 @@
       "image": "img/Barbie.jpg"
     },
     {
+      "id": 3,
       "nom": "Turing",
       "prenom": "Isaac",
       "alias": "Stormtrooper",
@@ -32,6 +35,7 @@
       "image": "img/Stormtrooper.jpg"
     },
     {
+      "id": 4,
       "nom": "Adèle",
       "prenom": "Curie",
       "alias": "Esmeralda",

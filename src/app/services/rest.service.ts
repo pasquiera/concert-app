@@ -10,23 +10,23 @@ import { IActivite } from 'src/app/models/IActivite';
 })
 export class RestService {
 
-  activites : string = "http://localhost:3000/activites"
-  artistes : string = "http://localhost:3000/artistes"
-  fans : string = "http://localhost:3000/fans"
+  activites: string = "http://localhost:3000/activites"
+  artistes: string = "http://localhost:3000/artistes"
+  fans: string = "http://localhost:3000/fans"
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getActivites() {
+  getActivites(): Observable<IActivite[]> {
     // Get all activites
     return this.http.get<IActivite[]>(this.activites);
   }
 
-  getArtistes() {
-    // Get all artistes
-    return this.http.get<IArtiste[]>(this.artistes);
+  getArtiste(id: number): Observable<IArtiste[]> {
+    // Get 1 artiste
+    return this.http.get<IArtiste[]>(`${this.artistes}?id_like=${id}`);
   }
 
-  getFans() : Observable<IFans[]> {
+  getFans(): Observable<IFans[]> {
     // Get all fans
     return this.http.get<IFans[]>(this.fans);
   }

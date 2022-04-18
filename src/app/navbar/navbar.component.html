@@ -1,10 +1,26 @@
 <header>
+
     <a [routerLink]="['/home']" class="logo" id="logo1"><img src="assets/img/otaku4k_white.png" alt=""></a>
     <a [routerLink]="['/home']" class="logo" id="logo2"><img src="assets/img/otaku4k_black.png" alt=""></a>
+
     <ul>
         <li><a [routerLink]="['/home']" fragment="event">événements</a></li>
-        <li><a [routerLink]="['/home']" fragment="crew" >à propos</a></li>
+        <li><a [routerLink]="['/home']" fragment="crew">à propos</a></li>
         <li><a [routerLink]="['/home']" fragment="fans">fans</a></li>
         <li><a [routerLink]="['/home']" fragment="track">extrait</a></li>
     </ul>
+
+    <div class="hamburger" (click)="setActive()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <nav class="mobile-nav">
+        <a [routerLink]="['/home']" fragment="event" (click)="setActive()">événements</a>
+        <a [routerLink]="['/home']" fragment="crew" (click)="setActive()">à propos</a>
+        <a [routerLink]="['/home']" fragment="fans" (click)="setActive()">fans</a>
+        <a [routerLink]="['/home']" fragment="track" (click)="setActive()">extrait</a>
+    </nav>
+
 </header>
