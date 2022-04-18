@@ -9,7 +9,7 @@
         "chant"
       ],
       "presentation": "Je suis un vrai fan de tartiflette, je pourrais en manger 100!",
-      "image": "img/Goku.jpg"
+      "image": "assets/img/Goku.jpg"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
         "basse"
       ],
       "presentation": "J'adore les animaux, enfin, seulement ceux qui sont mignons, coeur avec les mains mes petits Otaku4Kers",
-      "image": "img/Barbie.jpg"
+      "image": "assets/img/Barbie.jpg"
     },
     {
       "id": 3,
@@ -32,7 +32,7 @@
         "guitare"
       ],
       "presentation": "Je n'ai rien à dire.",
-      "image": "img/Stormtrooper.jpg"
+      "image": "assets/img/Stormtrooper.jpg"
     },
     {
       "id": 4,
@@ -43,7 +43,7 @@
         "batterie"
       ],
       "presentation": "La batterie, c'est mon amour! J'en fait depuis que j'ai 6 ans!",
-      "image": "img/Esmeralda.jpg"
+      "image": "assets/img/Esmeralda.jpg"
     }
   ],
   "activites": [

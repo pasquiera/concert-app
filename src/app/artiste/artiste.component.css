@@ -1,3 +1,78 @@
-p{
-    margin-top: 500px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.wrapper {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info {
+    text-align: center;
+    margin-top: -20px;
+    margin-left: 200px;
+}
+
+.info h3 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.info p {
+    text-transform: uppercase;
+    margin-top: -15px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(124, 124, 124);
+}
+
+.info .role {
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.presentation {
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 830px) {
+
+    .info {
+        margin-left: 70px;
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    .wrapper {
+        display: block;
+    }
+
+    .info {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .image img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
+    }
+
 }

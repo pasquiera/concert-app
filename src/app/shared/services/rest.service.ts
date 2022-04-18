@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { IArtiste } from 'src/app/models/IArtiste';
-import { IFans } from 'src/app/models/IFans';
+import { IArtiste } from 'src/app/shared/models/IArtiste';
+import { IFans } from 'src/app/shared/models/IFans';
 import { Observable } from 'rxjs';
-import { IActivite } from 'src/app/models/IActivite';
+import { IActivite } from 'src/app/shared/models/IActivite';
 
 @Injectable({
   providedIn: 'root'

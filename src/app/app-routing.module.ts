@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArtisteComponent } from './artiste/artiste.component';
 import { FansComponent } from './fans/fans.component';
-import { ArtisteGuard } from './guards/artiste.guard';
+import { ArtisteGuard } from './shared/guards/artiste.guard';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [

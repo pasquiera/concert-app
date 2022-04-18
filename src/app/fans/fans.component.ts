@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RestService } from 'src/app/services/rest.service';
-import { IFans } from '../models/IFans';
+import { RestService } from 'src/app/shared/services/rest.service';
+import { IFans } from '../shared/models/IFans';
 import { NgForm } from '@angular/forms';
 
 @Component({

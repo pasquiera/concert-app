@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { RestService } from 'src/app/services/rest.service';
-import { IArtiste } from '../models/IArtiste';
+import { RestService } from 'src/app/shared/services/rest.service';
+import { IArtiste } from '../shared/models/IArtiste';
 
 @Component({
   selector: 'app-artiste',
@@ -16,15 +16,16 @@ export class ArtisteComponent implements OnInit {
   constructor(private rest: RestService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // get the id of the artiste 
     this.id = +this.route.snapshot.paramMap.get('id')!;
 
     this.getArtiste(this.id);
   }
 
   getArtiste(id: number): void {
+    // get all the infos of the artiste
     this.rest.getArtiste(id).subscribe(res => {
       this.artiste = res[0];
-      console.log(this.artiste.nom)
     }, err => {
       console.log(err);
     })

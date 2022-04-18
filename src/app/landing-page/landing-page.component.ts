@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RestService } from 'src/app/services/rest.service';
+import { RestService } from 'src/app/shared/services/rest.service';
 
 
 import WaveSurfer from 'wavesurfer.js';
-import { IActivite } from '../models/IActivite';
+import { IActivite } from '../shared/models/IActivite';
 // Create a new object with a given prototype 
 var wavesurfer = Object.create(WaveSurfer);
 
