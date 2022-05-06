@@ -18,6 +18,8 @@ export class RestService {
 
   getActivites(): Observable<IActivite[]> {
     // Get all activites
+    // In general, an observable can return multiple values over time. 
+    // An observable from HttpClient always emits a single value and then completes, never to emit again.
     return this.http.get<IActivite[]>(this.activites);
   }
 
